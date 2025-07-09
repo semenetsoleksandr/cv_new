@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     min-width: 800px;
+    background: linear-gradient(0deg, #1b2c55,#3d85a9,#63cac8,#b8edff);
 }
 
 h1, h2 {

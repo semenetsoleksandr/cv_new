@@ -1,16 +1,5 @@
-import type {FC} from 'react';
-
-export interface Job {
-    id: number;
-    company: string;
-    role: string;
-    period: string;      // e.g. "Jan 2020 – Present"
-    description: string; // short bullet or paragraph
-}
-
-interface WorkHistoryProps {
-    jobs: Job[];
-}
+import type {FC} from "react";
+import type {WorkHistoryProps} from "../types/job.ts";
 
 export const WorkHistory: FC<WorkHistoryProps> = ({jobs}) => {
     return (
