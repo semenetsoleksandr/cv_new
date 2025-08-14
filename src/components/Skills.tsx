@@ -38,6 +38,7 @@ export const Skills: FC = () => {
                     <li key={skill.id}>{skill.skill}</li>
                 ))}
             </ul>
+
         </section>
     );
 };

@@ -16,5 +16,12 @@ export default [
       '@stylistic/quotes': ['error', 'double'],
       '@stylistic/jsx-quotes': ['error', 'prefer-double'],
     },
+
+  },
+  {
+    files: ['jest.config.ts'],
+    rules: {
+      '@stylistic/quotes': 'off',
+    },
   },
 ];
