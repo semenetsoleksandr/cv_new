@@ -1,8 +1,8 @@
 import "./App.css"
-import Overview from "./components/Overview";
-import {WorkHistory} from "./components/WorkHistory";
-import {Skills} from "./components/Skills";
-import ContactForm from "./components/ContactForm";
+import Overview from "./components/Overview/Overview";
+import {WorkHistory} from "./components/WorkHistory/WorkHistory";
+import {Skills} from "./components/Skills/Skills";
+import ContactForm from "./components/ContactForm/ContactForm";
 import {staticJobs} from "./components/StaticJobs";
 
 function App() {

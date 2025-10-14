@@ -1,6 +1,6 @@
 import React, {type ChangeEvent, type FormEvent, useState} from "react";
-import type {ISendMessageRequestBody} from "../types/messages.ts";
-import {cvApi} from "../services/cv-api";
+import type {ISendMessageRequestBody} from "../../types/messages.ts";
+import {cvApi} from "../../services/cv-api";
 
 const ContactForm: React.FC = () => {
     const [formData, setFormData] = useState<ISendMessageRequestBody>({

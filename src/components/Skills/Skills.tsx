@@ -1,5 +1,5 @@
 import {type FC, useEffect, useState} from "react";
-import type {ISkill} from "../types/skills.ts";
+import type {ISkill} from "../../types/skills.ts";
 
 export const Skills: FC = () => {
     const [skills, setSkills] = useState<ISkill[]>([]);

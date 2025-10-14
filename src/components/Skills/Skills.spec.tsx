@@ -1,6 +1,6 @@
 import {render, screen, waitFor } from "@testing-library/react";
-import {Skills} from "../Skills";
-import {ISkill} from "../../types/skills";
+import {Skills} from "./Skills";
+import type {ISkill} from "../../types/skills.ts";
 import "@testing-library/jest-dom";
 
 const skills :ISkill[] = [

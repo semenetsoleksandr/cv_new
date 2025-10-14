@@ -1,5 +1,5 @@
 import type {FC} from "react";
-import type {WorkHistoryProps} from "../types/job.ts";
+import type {WorkHistoryProps} from "../../types/job.ts";
 
 export const WorkHistory: FC<WorkHistoryProps> = ({jobs}) => {
     return (

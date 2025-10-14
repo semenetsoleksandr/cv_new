@@ -1,5 +1,5 @@
 import {render, screen, fireEvent, waitFor} from "@testing-library/react";
-import ContactForm from "../ContactForm";
+import ContactForm from "./ContactForm";
 import "@testing-library/jest-dom";
 import {ISendMessageRequestBody} from "../../types/messages";
 
@@ -61,10 +61,7 @@ describe("ContactForm", () => {
         })
     })
     it("shows loading initially", async () => {
-        (global.fetch as jest.Mock).mockImplementationOnce(() =>
-            new Promise(() => {
-            })
-        );
+        (global.fetch as jest.Mock).mockReturnValue(Promise.resolve());
 
         render(<ContactForm/>)
         const usernameInput = screen.getByPlaceholderText("Enter your name");

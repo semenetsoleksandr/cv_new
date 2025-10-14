@@ -1,7 +1,7 @@
 import type {ISendMessageRequestBody} from "../types/messages.ts";
 
 export class CvApi {
-    async sendMessage(data: ISendMessageRequestBody) {
+    async sendMessage(data: ISendMessageRequestBody): Promise<void> {
         const res = await fetch("http://localhost:8080/messages", {
             method: "POST",
             headers: {
@@ -16,7 +16,7 @@ export class CvApi {
     }
 
     async delSkill (id: string | null) {
-        fetch(`http://localhost:8080/skills/${id}`, {
+        await fetch(`http://localhost:8080/skills/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json;charset=utf-8"
@@ -24,9 +24,5 @@ export class CvApi {
         });
     }
 }
-
-
-
-
 
 export const cvApi = new CvApi()

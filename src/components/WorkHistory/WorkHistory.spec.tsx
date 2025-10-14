@@ -1,6 +1,6 @@
 import type {Job} from "../../types/job";
 import { render, screen } from "@testing-library/react";
-import {WorkHistory} from "../WorkHistory";
+import {WorkHistory} from "./WorkHistory";
 import "@testing-library/jest-dom";
 
 const Jobs: Job[] = [
