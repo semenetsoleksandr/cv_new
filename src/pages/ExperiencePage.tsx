@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 import {Skills} from '../components/Skills/Skills.tsx';
 import {WorkHistory} from '../components/WorkHistory/WorkHistory.tsx';
-import {staticJobs} from '../../public/StaticJobs.ts';
+import {staticJobs} from '../components/StaticJobs.ts';
 import Box from '@mui/material/Box';
 
 
