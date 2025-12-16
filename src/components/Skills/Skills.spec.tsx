@@ -1,16 +1,16 @@
-import {render, screen, waitFor } from "@testing-library/react";
-import {Skills} from "./Skills";
-import type {ISkill} from "../../types/skills.ts";
-import "@testing-library/jest-dom";
+import {render, screen, waitFor } from '@testing-library/react';
+import {Skills} from './Skills';
+import type {ISkill} from '../../types/skills.ts';
+import '@testing-library/jest-dom';
 
 const skills :ISkill[] = [
     {
         id: 101,
-        skill: "HTML + CSS"
+        skill: 'HTML + CSS'
     },
     {
         id: 102,
-        skill: "Typescript"
+        skill: 'Typescript'
     }
 ]
 
@@ -26,18 +26,18 @@ beforeEach(() => {
 
 
 
-describe("Skills component", () => {
-    it("renders fetched skills", async ()  => {
+describe('Skills component', () => {
+    it('renders fetched skills', async ()  => {
         render(<Skills/>)
 
         await waitFor(() => {
-            expect(screen.getByText("Skills")).toBeInTheDocument();
+            expect(screen.getByText('Skills')).toBeInTheDocument();
         });
 
-        expect(screen.getByText("HTML + CSS")).toBeInTheDocument();
-        expect(screen.getByText("Typescript")).toBeInTheDocument();
+        expect(screen.getByText('HTML + CSS')).toBeInTheDocument();
+        expect(screen.getByText('Typescript')).toBeInTheDocument();
     });
-    it("shows error message on fetch fail", async ()  => {
+    it('shows error message on fetch fail', async ()  => {
         (global.fetch as jest.Mock).mockImplementationOnce(() =>
             Promise.resolve({
                 ok: false,
@@ -47,16 +47,16 @@ describe("Skills component", () => {
         render(<Skills/>)
 
         await waitFor(() => {
-            expect(screen.getByText("Error loading skills: HTTP error! Status: 500")).toBeInTheDocument();
+            expect(screen.getByText('Error loading skills: HTTP error! Status: 500')).toBeInTheDocument();
         });
     });
-    it("shows loading initially", async () => {
+    it('shows loading initially', async () => {
         (global.fetch as jest.Mock).mockImplementationOnce(() =>
             new Promise(() => {})
         );
         render(<Skills/>)
         await waitFor(() => {
-            expect(screen.getByText("Loading skills…")).toBeInTheDocument();
+            expect(screen.getByText('Loading skills…')).toBeInTheDocument();
         });
     })
 })

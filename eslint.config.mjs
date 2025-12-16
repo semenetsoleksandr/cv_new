@@ -13,7 +13,7 @@ export default [
 
     rules: {
       '@stylistic/indent': ['error', 4],
-      '@stylistic/quotes': ['error', 'double'],
+      '@stylistic/quotes': ['error', 'single'],
       '@stylistic/jsx-quotes': ['error', 'prefer-double'],
     },
 

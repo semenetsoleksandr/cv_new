@@ -1,4 +1,4 @@
-import type {Job} from '../types/job';
+import type {Job} from '../src/types/job.ts';
 
 export const staticJobs: Job[] = [
     {
