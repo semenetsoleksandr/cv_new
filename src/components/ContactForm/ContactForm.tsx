@@ -13,6 +13,7 @@ import SendIcon from '@mui/icons-material/Send';
 import InputAdornment from '@mui/material/InputAdornment';
 import EmailIcon from '@mui/icons-material/Email';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import styles from './ContactForm.module.css';
 
 export const ContactForm: React.FC = () => {
     const [formData, setFormData] = useState<ISendMessageRequestBody>({
@@ -52,10 +53,9 @@ export const ContactForm: React.FC = () => {
         return <p>Error loading ContactForm: {error}</p>;
     }
 
-
     return (
         <Container maxWidth="sm">
-            <Card sx={{maxWidth: 600}}>
+            <Card sx={{maxWidth: 600}} className={styles.card}>
 
                 <CardHeader
                     title="ContactForm"
